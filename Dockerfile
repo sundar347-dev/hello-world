@@ -1,3 +1,4 @@
-FROM java:8
-MAINTAINER sundhar@gmail.com
-ADD /home/dockeradmin/workspace/project2/target/*.jar /
+FROM tomcat:latest
+MAINTAINER SUNDAR@GMAIL.COM
+COPY ./webapp/target/webapp.war /usr/local/tomcat/webapp/
+CMD ["bin/catalina.sh", "run"]
